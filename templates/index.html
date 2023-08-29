@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<link href="/static/styles.css" rel="stylesheet">
+{% endblock %}
+
+<!-- change to triple lines if mobile -->
+{% block body %}
+
+
+
+
+<video playsinline autoplay muted loop>
+    <source src="https://www.repslabel.com/wp-content/uploads/2022/04/placeholder-preview.mp4
+    " type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+
+    <header class="diff-bg">
+        <img class="logo" src="https://www.repslabel.com/wp-content/themes/repslabel/assets/src/images/logo.svg" alt="logo">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Expertise</a></li>
+                <li><a href="#">Repslife</a></li>
+                <li><a href="#" id="fr">FR</a></l>
+            </ul>
+        </nav>
+        <a href="#"><button class="contact">Contact Us</button></a>
+    </header>
+
+    <button id="menu"><img src="https://www.freeiconspng.com/thumbs/menu-icon/menu-icon-24.png"></button>
+
+    <form action="/logout">
+        <button class="hidden" type="submit">Log Out</button>
+    </form>
+
+    <form action="/delete_account">
+        <button class="hidden" type="submit">Delete Account</button>
+    </form>
+
+
+    <h1 class="hidden">Shows</h1>
+
+    <div class="hidden" >
+        <input id="search" placeholder="search" autocomplete="off" autofocus>
+        <select name="shows-order" id="shows-order">
+            <option value="rating" selected disabled>Order By</option>
+            <option value="title">Alphabetically</option>
+            <option value="rating">Rating</option>
+            <option value="year">Year</option>
+        </select>
+
+        <select name="shows-quantity" id="shows-quantity">
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="40">30</option>
+            <option value="40">40</option>
+        </select>
+
+        <select name="shows-asc-desc" id="shows-asc-desc">
+            <option value="DESC">Descending</option>
+            <option value="ASC">Ascending</option>
+        </select>
+
+    </div>
+
+    <ul class="hidden" id="showMovies"></ul>
+
+    <h1>We believe every <br><span class="highlight">STORY</span> is worth <br> sharing</h1>
+
+    <script src="static/search.js"></script>
+
+{% endblock %}

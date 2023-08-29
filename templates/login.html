@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+<link href="/static/entry.css" rel="stylesheet">
+
+{% endblock %}
+
+
+
+{% block body %}
+
+
+
+<div class="wrapper">
+  <div class="formContent">
+
+    <!-- Icon -->
+    <div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" method="post">
+      <div>
+        <input type="username" name="username" placeholder="username" autocomplete="off" autofocus required>
+      </div>
+      <div>
+        <input type="password" name="password" placeholder="password" autocomplete="off" required>
+      </div>
+      <div>
+        <input class="btn btn-signup" type="submit" value="Log In">
+      </div>
+    </form>
+
+    <!-- Footer -->
+    <div class="formFooter">
+      <form action="/signup">
+        <label>No account?</label>
+        <button class="btn btn-link"> Create one!</a>
+      </form>
+    </div>
+  </div>
+  {% endblock %}

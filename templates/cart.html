@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+
+{% block body %}
+
+    <h1> Your Cart </h1>
+    {% for book in books %}
+    <list>
+        <ol>{{ book }}</ol>
+    </list>
+    {% endfor %}
+    <form action="/cart" method="post">
+        <button name="clear" type="submit">Clear All Books Now</button>
+    </form>
+
+{% endblock %}
